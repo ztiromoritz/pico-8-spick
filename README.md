@@ -1,2 +1,2 @@
 # pico-8-spick
-German pico-8 Cheatsheet.
+PICO-8 Spickzettel/PICO-8 Cheatsheet.

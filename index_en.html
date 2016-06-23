@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>pico-8 cheatsheet - Das Wichtigste - Version 1</title>
+    <title>pico-8 cheatsheet</title>
     <style>
         @font-face {
             font-family: "pico8";
@@ -25,7 +25,7 @@
 
         .page {
             font-family: Courier, monospace;
-            height: 297mm;
+            height: 277mm;
             width: 210mm;
             margin: 0 auto;
             background-color: #fff;
@@ -34,10 +34,11 @@
 
         .title {
             width: 205mm;
-            height: 3mm;
+            height: 1mm;
             margin: 2.5mm;
             padding-top: 3mm;
             font-family: pico8, monospace;
+            font-size: 10px;
             /*background-color: #00ff00;*/
         }
 
@@ -60,6 +61,7 @@
         .block h3 {
             margin-top: 3mm;
             margin-bottom: 1mm;
+
         }
 
         .block h4 {
@@ -78,8 +80,10 @@
         code {
             font-family: pico8, monospace;
             line-height: 1.4;
-            font-size: 12px;
+            font-size: 11px;
         }
+
+
 
         .pdf {
             font-family: pico8, monospace;
@@ -99,6 +103,8 @@
                 display: none;
             }
         }
+
+
     </style>
 </head>
 
@@ -107,12 +113,12 @@
     <div class="page">
         <div class="title">
             <h1>
-                PICO-8 SPICKZETTEL
+                PICO-8 Cheatsheet
             </h1>
         </div>
         <div class="column">
             <div class="block">
-                <h3>Kommandozeile</h3>
+                <h3>Commandline</h3>
                 <pre>
 <code class="language-lua">HELP
 SAVE GAME.P8
@@ -124,17 +130,16 @@ SPLORE
 
             <div class="block">
 
-                <h3>Variablen &amp; Typen</h3>
+                <h3>Variables &amp; Types</h3>
                 <pre><code class="language-lua">A=nil
 X=23
-S="TEXT"
-T={ name:"Moritz",
-    loc:"Dortmund"}
+local S="TEXT"
+T={name:"Joe", age:"32"}
 </code></pre>
             </div>
             <div class="block">
 
-                <h3>Operatoren</h3>
+                <h3>Operators</h3>
                 <pre><code class="language-lua">+ - * / ^ %
 &lt; > <= >= ~= ==
 #list  "A".."B"
@@ -144,7 +149,7 @@ and or no
 
             <div class="block">
 
-                <h3>Funktionen</h3>
+                <h3>Functions</h3>
                 <pre><code class="language-lua">FUNCTION ADD(a,b)
  RETURN A+B
 END</code></pre>
@@ -152,7 +157,7 @@ END</code></pre>
 
             <div class="block">
 
-                <h3>If-Anweisungen</h3>
+                <h3>If-Statement</h3>
                 <pre><code class="language-lua">IF (X  < 33) THEN
  PRINT("HALLO")
 else
@@ -161,13 +166,13 @@ END</code></pre>
             </div>
 
             <div class="block">
-                <h3>Schleifen</h3>
-                <pre><code class="language-lua">--RAUF
+                <h3>Loops</h3>
+                <pre><code class="language-lua">--UP
 FOR I = 1,10 DO
  PRINT(I)
 END
 
---RUNTER
+--DOWN
 FOR A=10,0,-2 DO
  PRINT(A)
 END
@@ -177,7 +182,7 @@ FOR S IN ALL(SHIPS) DO
  PRINT(S.NAME)
 END
 
---TABELLE
+--Table
 FOR K,V IN PAIRS(M) DO
  PRINT("K:"..K..",V:"..V)
 END</code></pre>
@@ -186,25 +191,25 @@ END</code></pre>
 
             </div>
             <div class="block">
-                <h3>Tabellen</h3>
+                <h3>Tables</h3>
                 <pre><code class="language-lua">t={a="x",b=1}
 add(t, v)
 del(t, v)
 t={1,2,3,4}
-print(t[1]) --1-basiert!! </code></pre>
+print(t[1]) --1-based!! </code></pre>
             </div>
         </div>
 
 
         <div class="column">
             <div class="block">
-                <h3>Sonderfunktionen</h3>
+                <h3>Special callbacks</h3>
                 <pre><code class="language-lua">_init()
 _update()
 _draw()</code></pre>
             </div>
             <div class="block">
-                <h3>Farben</h3>
+                <h3>Colors</h3>
                 <img src="./palette_numbers.png" width="100%">
                 <pre><code class="language-lua"></code></pre>
             </div>
@@ -215,7 +220,7 @@ pget(x,y)</code></pre>
 
             </div>
             <div class="block">
-                <h3>Formen</h3>
+                <h3>Shapes</h3>
                 <pre><code class="language-lua">rect(x0,y0,x1,y1, [col])
 rectfill(x0,y0,x1,y1,[c])
 circ(x, y, r, [c])
@@ -247,14 +252,14 @@ map(map_x, map_y,
 
         <div class="column">
             <div class="block">
-                <h3>Eingabe</h3>
+                <h3>Controls</h3>
                 <div class="gray">
 
                     <img src="./controls.png" width="100%">
                 </div>
                 <p>
                     Player 1:
-                    <br>&nbsp; ⬅︎⬆︎⬇︎➡︎ C,V bzw. N,M
+                    <br>&nbsp; ⬅︎⬆︎⬇︎➡︎ Y,X/C,V/N,M
                     <br> Player 2:
                     <br>&nbsp; ASDF, LSHIFT, A
                     <br>
@@ -270,7 +275,7 @@ btnp([i, [p]]) </code></pre>
 music([n, [fade, mask]])</code></pre>
             </div>
             <div class="block">
-                <h3>Sound-Effekte</h3>
+                <h3>Sound-Effects</h3>
                 <pre><code class="language-lua">0 none
 1 slide
 2 vibrato
@@ -281,7 +286,7 @@ music([n, [fade, mask]])</code></pre>
 7 slow arpeggio</code></pre>
             </div>
             <div class="block">
-                <h3>Mathe</h3>
+                <h3>Math</h3>
                 <pre><code class="language-lua">abs(x),atan2(dx, dy),
 cos(x),sin(x),
 flr(x),max(x,y),min(x,y),
@@ -289,31 +294,33 @@ rnd(x),sgn(x),sqrt(x)</code></pre>
             </div>
 
             <div class="block">
-                <h3>Tastenkürzel</h3> Allgemein:
-                <br> &nbsp;Speichern: STR+S
-                <br> &nbsp;Modus wechseln: ESC Editor
+                <h3>Shortcuts</h3> Common:
+                <br> &nbsp;Save: STR+S
+                <br> &nbsp;Change Mode: ESC
+                <br> Editor
                 <br> &nbsp;Undo:STR+Z
                 <br> &nbsp;Redo:STR+Y
-                <br> &nbsp;Suchen:STR+F
-                <br> &nbsp;Weitersuchen:STR+G
-                <br> &nbsp;Nächste Function:Alt+⬆︎⬇︎
+                <br> &nbsp;Search:STR+F
+                <br> &nbsp;Search-Next:STR+G
+                <br> &nbsp;Next Function:Alt+⬆︎⬇︎
             </div>
 
             <div class="block">
                 <div style="font-size: 12px;">
-                    <img src="unicorn.png" width=30> German Pico-8 Cheatsheet. Version 1. Zusammengestellt von <a href="https://twitter.com/ztiromoritz">@ztiromoritz</a>. Font: Gestaltet von <a href="http://www.lexaloffle.com/info.php?page=1">Joseph White</a>.
-                    TTF erstellt von <a href="http://www.lexaloffle.com/bbs/?tid=3109">RhythmLynx</a>. Dieses Cheatsheet ist inspiriert von <a href="http://neko250.github.io/pico8-api/">@neko250/pico-8 api</a> und <a href="https://sectordub.itch.io/pico-8-fanzine-3">@obone/picozine-3</a>.
+                    <img src="unicorn.png" width=30> Pico-8 Cheatsheet. Version 1(en). Collected by <a href="https://twitter.com/ztiromoritz">@ztiromoritz</a>. Font: Designed by <a href="http://www.lexaloffle.com/info.php?page=1">Joseph White</a>. TTF
+                    created by <a href="http://www.lexaloffle.com/bbs/?tid=3109">RhythmLynx</a>. This Cheatsheet is inspired by <a href="http://neko250.github.io/pico8-api/">@neko250/pico-8 api</a> and <a href="https://sectordub.itch.io/pico-8-fanzine-3">@obone/picozine-3</a>.
                 </div>
             </div>
         </div>
     </div>
     <div class="pdf">
-      <a href="./index_en.html">English Version</a>
-      <br>
-      <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel-v1.pdf">PDF (DE)</a>
-      <br>
-      <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel-v1-en.pdf">PDF (EN)</a>
-</div>
+        <a href="./index.html">German Version</a>
+        <br>
+        <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel-v1.pdf">PDF (DE)</a>
+        <br>
+        <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel-v1-en.pdf">PDF (EN)</a>
+
+    </div>
 
 </body>
 
