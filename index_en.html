@@ -53,14 +53,16 @@
         .block {
             width: 100%;
             background-color: #eee;
-            margin-top: 3mm;
-            margin-bottom: 3mm;
+            margin-top: 1mm;
+            margin-bottom: 0mm;
             background-color: #eee;
         }
 
         .block h3 {
-            margin-top: 3mm;
+            margin-top: 1mm;
+            margin-left: 1mm;
             margin-bottom: 1mm;
+
 
         }
 
@@ -97,6 +99,15 @@
             right: 10px;
             top: 10px;
         }
+
+        pre,p {
+            padding-left:1mm;
+        }
+        p {
+            font-size: 11px;
+        }
+
+
 
         @media print {
             .pdf {
@@ -204,10 +215,16 @@ print(t[1]) --1-based!! </code></pre>
         <div class="column">
             <div class="block">
                 <h3>Special callbacks</h3>
-                <pre><code class="language-lua">_init()
-_update()
-_draw()</code></pre>
+                <pre><code class="language-lua">_init() _update() _draw()</code></pre>
             </div>
+            <div class="block">
+                <h3>Sprites</h3>
+                <pre><code class="language-lua">spr(n, x, y, [w, h],
+  [flip_x], [flip_y])
+sspr(sx, sy, sw, sh,
+  dx, dy, [dw, dh],
+  [flip_x], [flip_y])</code></pre>
+             </div>
             <div class="block">
                 <h3>Colors</h3>
                 <img src="./palette_numbers.png" width="100%">
@@ -275,7 +292,10 @@ btnp([i, [p]]) </code></pre>
 music([n, [fade, mask]])</code></pre>
             </div>
             <div class="block">
-                <h3>Sound-Effects</h3>
+                <h3>Tracker</h3>
+                <div style="background-color:#ddd;">
+               <img src="./tracker.svg" width="100%">
+              </div>
                 <pre><code class="language-lua">0 none
 1 slide
 2 vibrato
@@ -307,8 +327,11 @@ rnd(x),sgn(x),sqrt(x)</code></pre>
 
             <div class="block">
                 <div style="font-size: 12px;">
-                    <img src="unicorn.png" width=30> Pico-8 Cheatsheet. Version 1(en). Collected by <a href="https://twitter.com/ztiromoritz">@ztiromoritz</a>. Font: Designed by <a href="http://www.lexaloffle.com/info.php?page=1">Joseph White</a>. TTF
-                    created by <a href="http://www.lexaloffle.com/bbs/?tid=3109">RhythmLynx</a>. This Cheatsheet is inspired by <a href="http://neko250.github.io/pico8-api/">@neko250/pico-8 api</a> and <a href="https://sectordub.itch.io/pico-8-fanzine-3">@obone/picozine-3</a>.
+                    Pico-8 Cheatsheet. Version 2(en).
+                    Collected by <a href="https://twitter.com/ztiromoritz">@ztiromoritz</a>.
+                    Font: <a href="http://www.lexaloffle.com/info.php?page=1">Joseph White</a>.
+                    TTF by <a href="http://www.lexaloffle.com/bbs/?tid=3109">RhythmLynx</a>.
+                    Inspired by <a href="http://neko250.github.io/pico8-api/">@neko250/pico-8 api</a> and <a href="https://sectordub.itch.io/pico-8-fanzine-3">@obone/picozine-3</a>.
                 </div>
             </div>
         </div>
@@ -316,9 +339,9 @@ rnd(x),sgn(x),sqrt(x)</code></pre>
     <div class="pdf">
         <a href="./index.html">German Version</a>
         <br>
-        <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel-v1.pdf">PDF (DE)</a>
+        <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel.pdf">PDF (DE)</a>
         <br>
-        <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel-v1-en.pdf">PDF (EN)</a>
+        <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-cheatsheet.pdf">PDF (EN)</a>
 
     </div>
 
