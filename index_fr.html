@@ -91,7 +91,7 @@
             font-family: pico8, monospace;
             font-size: 12px;
             padding: 5px;
-            width: 160px;
+            width: 180px;
             height: 80px;
             line-height: 1.4;
             background-color: white;
@@ -129,7 +129,7 @@
         </div>
         <div class="column">
             <div class="block">
-                <h3>Ligne de command</h3>
+                <h3>Ligne de commande</h3>
                 <pre>
 <code class="language-lua">HELP
 SAVE GAME.P8
@@ -150,7 +150,7 @@ T={name:"Joe", age:"32"}
             </div>
             <div class="block">
 
-                <h3>Operateurrs</h3>
+                <h3>Operateurs</h3>
                 <pre><code class="language-lua">+ - * / ^ %
 &lt; > <= >= ~= ==
 #list  "A".."B"
@@ -178,17 +178,17 @@ END</code></pre>
 
             <div class="block">
                 <h3>Boucles</h3>
-                <pre><code class="language-lua">--UP
+                <pre><code class="language-lua">--Incrementer
 FOR I = 1,10 DO
  PRINT(I)
 END
 
---DOWN
+--Decrementer
 FOR A=10,0,-2 DO
  PRINT(A)
 END
 
---ARRAY
+--Collection
 FOR S IN ALL(SHIPS) DO
  PRINT(S.NAME)
 END
@@ -214,7 +214,7 @@ print(t[1]) --1-based!! </code></pre>
 
         <div class="column">
             <div class="block">
-                <h3>Fonctions specials</h3>
+                <h3>Fonctions speciales</h3>
                 <pre><code class="language-lua">_init() _update() _draw()</code></pre>
             </div>
             <div class="block">
@@ -226,7 +226,7 @@ sspr(sx, sy, sw, sh,
   [flip_x], [flip_y])</code></pre>
              </div>
             <div class="block">
-                <h3>Couleur</h3>
+                <h3>Couleurs</h3>
                 <img src="./palette_numbers.png" width="100%">
                 <pre><code class="language-lua"></code></pre>
             </div>
@@ -315,14 +315,14 @@ rnd(x),sgn(x),sqrt(x)</code></pre>
 
             <div class="block">
                 <h3>Raccourcis</h3> Commun:
-                <br> &nbsp;Sauver: STR+S
+                <br> &nbsp;Sauver: CTRL+S
                 <br> &nbsp;Changer Mode: ESC
                 <br> Editeur
-                <br> &nbsp;Annuler:STR+Z
-                <br> &nbsp;Retablie:STR+Y
-                <br> &nbsp;Chercher:STR+F
-                <br> &nbsp;Chercher suivant:STR+G
-                <br> &nbsp;Fonction suivante:Alt+⬆︎⬇︎
+                <br> &nbsp;Annuler: CTRL+Z
+                <br> &nbsp;Retablir: CTRL+Y
+                <br> &nbsp;Chercher: CTRL+F
+                <br> &nbsp;Chercher suivant: CTRL+G
+                <br> &nbsp;Fonction suiv.: Alt+⬆︎⬇︎
             </div>
 
             <div class="block">
@@ -338,8 +338,10 @@ rnd(x),sgn(x),sqrt(x)</code></pre>
         </div>
     </div>
     <div class="pdf">
-        <a href="./index.html">German Version</a>
+        <a href="./index.html">Version Allemande</a>
         <br>
+        <a href="./index_en.html">Version Anglaise</a>
+	<br>
         <a href="https://github.com/godzil/pico-8-spick/raw/master/build/pico-8-spickzettel.pdf">PDF (DE)</a>
         <br>
         <a href="https://github.com/godzil/pico-8-spick/raw/master/build/pico-8-cheatsheet.pdf">PDF (EN)</a>
