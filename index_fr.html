@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>pico-8 cheatsheet</title>
+    <style>
+        @font-face {
+            font-family: "pico8";
+            src: url("./PICO-8.ttf");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            -webkit-padding-start: 0px;
+        }
+
+        body {
+            background-color: #aaa;
+        }
+
+        .page {
+            font-family: Courier, monospace;
+            height: 277mm;
+            width: 210mm;
+            margin: 0 auto;
+            background-color: #fff;
+            /* background-color: #ff00ff; */
+        }
+
+        .title {
+            width: 205mm;
+            height: 1mm;
+            margin: 2.5mm;
+            padding-top: 3mm;
+            font-family: pico8, monospace;
+            font-size: 10px;
+            /*background-color: #00ff00;*/
+        }
+
+        .column {
+            height: 287mm;
+            width: 65mm;
+            margin: 2.5mm;
+            /*background-color: #00ff00;  */
+            float: left
+        }
+
+        .block {
+            width: 100%;
+            background-color: #eee;
+            margin-top: 1mm;
+            margin-bottom: 0mm;
+            background-color: #eee;
+        }
+
+        .block h3 {
+            margin-top: 1mm;
+            margin-left: 1mm;
+            margin-bottom: 1mm;
+
+
+        }
+
+        .block h4 {
+            margin-top: 2mm;
+        }
+
+        pre,
+        .gray {
+            background-color: #ddd;
+        }
+
+        code::first-line {
+            line-height: 0px;
+        }
+
+        code {
+            font-family: pico8, monospace;
+            line-height: 1.4;
+            font-size: 11px;
+        }
+
+
+
+        .pdf {
+            font-family: pico8, monospace;
+            font-size: 12px;
+            padding: 5px;
+            width: 160px;
+            height: 80px;
+            line-height: 1.4;
+            background-color: white;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        pre,p {
+            padding-left:1mm;
+        }
+        p {
+            font-size: 11px;
+        }
+
+
+
+        @media print {
+            .pdf {
+                display: none;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="title">
+            <h1>
+                PICO-8 Cheatsheet
+            </h1>
+        </div>
+        <div class="column">
+            <div class="block">
+                <h3>Ligne de command</h3>
+                <pre>
+<code class="language-lua">HELP
+SAVE GAME.P8
+LOAD GAME.P8
+RUN
+SPLORE
+</code></pre>
+            </div>
+
+            <div class="block">
+
+                <h3>Variables &amp; Types</h3>
+                <pre><code class="language-lua">A=nil
+X=23
+local S="TEXT"
+T={name:"Joe", age:"32"}
+</code></pre>
+            </div>
+            <div class="block">
+
+                <h3>Operateurrs</h3>
+                <pre><code class="language-lua">+ - * / ^ %
+&lt; > <= >= ~= ==
+#list  "A".."B"
+and or not
+</code></pre>
+            </div>
+
+            <div class="block">
+
+                <h3>Fonctions</h3>
+                <pre><code class="language-lua">FUNCTION ADD(a,b)
+ RETURN A+B
+END</code></pre>
+            </div>
+
+            <div class="block">
+
+                <h3>Block If</h3>
+                <pre><code class="language-lua">IF (X  < 33) THEN
+ PRINT("HALLO")
+else
+ print("hey")
+END</code></pre>
+            </div>
+
+            <div class="block">
+                <h3>Boucles</h3>
+                <pre><code class="language-lua">--UP
+FOR I = 1,10 DO
+ PRINT(I)
+END
+
+--DOWN
+FOR A=10,0,-2 DO
+ PRINT(A)
+END
+
+--ARRAY
+FOR S IN ALL(SHIPS) DO
+ PRINT(S.NAME)
+END
+
+--Table
+FOR K,V IN PAIRS(M) DO
+ PRINT("K:"..K..",V:"..V)
+END</code></pre>
+
+
+
+            </div>
+            <div class="block">
+                <h3>Tables</h3>
+                <pre><code class="language-lua">t={a="x",b=1}
+add(t, v)
+del(t, v)
+t={1,2,3,4}
+print(t[1]) --1-based!! </code></pre>
+            </div>
+        </div>
+
+
+        <div class="column">
+            <div class="block">
+                <h3>Fonctions specials</h3>
+                <pre><code class="language-lua">_init() _update() _draw()</code></pre>
+            </div>
+            <div class="block">
+                <h3>Sprites</h3>
+                <pre><code class="language-lua">spr(n, x, y, [w, h],
+  [flip_x], [flip_y])
+sspr(sx, sy, sw, sh,
+  dx, dy, [dw, dh],
+  [flip_x], [flip_y])</code></pre>
+             </div>
+            <div class="block">
+                <h3>Couleur</h3>
+                <img src="./palette_numbers.png" width="100%">
+                <pre><code class="language-lua"></code></pre>
+            </div>
+            <div class="block">
+                <h3>Pixel</h3>
+                <pre><code class="language-lua">pset(x, y, [c])
+pget(x,y)</code></pre>
+
+            </div>
+            <div class="block">
+                <h3>Formes</h3>
+                <pre><code class="language-lua">rect(x0,y0,x1,y1, [col])
+rectfill(x0,y0,x1,y1,[c])
+circ(x, y, r, [c])
+circfill(x, y, r, [c])
+line(x0, y0, x1, y1, [c])</code></pre>
+            </div>
+            <div class="block">
+                <h3>Ecran</h3>
+                <pre><code class="language-lua">cls()
+camera([x, y])
+clip([x, y, w, h])</code></pre>
+                <img src="screensize.png" width="100%">
+
+            </div>
+            <div class="block">
+                <h3>Tilemap</h3>
+                <pre><code class="language-lua">mget(x, y)
+mset(x, y, v)
+map(map_x, map_y,
+  screen_x, screen_y,
+  width, height, [layer])</code></pre>
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="column">
+            <div class="block">
+                <h3>Controles</h3>
+                <div class="gray">
+
+                    <img src="./controls.png" width="100%">
+                </div>
+                <p>
+                    Player 1:
+                    <br>&nbsp; ⬅︎⬆︎⬇︎➡︎ Y,X/C,V/N,M
+                    <br> Player 2:
+                    <br>&nbsp; ASDF, LSHIFT, A
+                    <br>
+                </p>
+                <pre><code class="language-lua">btn([i, [p]])
+btnp([i, [p]]) </code></pre>
+            </div>
+
+
+            <div class="block">
+                <h3>Son</h3>
+                <pre><code class="language-lua">sfx(n, [chan, offset])
+music([n, [fade, mask]])</code></pre>
+            </div>
+            <div class="block">
+                <h3>Musique</h3>
+                <div style="background-color:#ddd;">
+               <img src="./tracker.svg" width="100%">
+              </div>
+                <pre><code class="language-lua">0 none
+1 glisser
+2 vibrato
+3 drop (drum)
+4 fade in
+5 fade out
+6 arpeggio rapide
+7 arpeggio lent</code></pre>
+            </div>
+            <div class="block">
+                <h3>Math</h3>
+                <pre><code class="language-lua">abs(x),atan2(dx, dy),
+cos(x),sin(x),
+flr(x),max(x,y),min(x,y),
+rnd(x),sgn(x),sqrt(x)</code></pre>
+            </div>
+
+            <div class="block">
+                <h3>Raccourcis</h3> Commun:
+                <br> &nbsp;Sauver: STR+S
+                <br> &nbsp;Changer Mode: ESC
+                <br> Editeur
+                <br> &nbsp;Annuler:STR+Z
+                <br> &nbsp;Retablie:STR+Y
+                <br> &nbsp;Chercher:STR+F
+                <br> &nbsp;Chercher suivant:STR+G
+                <br> &nbsp;Fonction suivante:Alt+⬆︎⬇︎
+            </div>
+
+            <div class="block">
+                <div style="font-size: 12px;">
+                    Pico-8 Cheatsheet. Version 2(fr).
+                    Collected by <a href="https://twitter.com/ztiromoritz">@ztiromoritz</a>.
+                    French Translation by <a href="https://twitter.com/gozilu">@gozilu</a>.
+                    Font: <a href="http://www.lexaloffle.com/info.php?page=1">Joseph White</a>.
+                    TTF by <a href="http://www.lexaloffle.com/bbs/?tid=3109">RhythmLynx</a>.
+                    Inspired by <a href="http://neko250.github.io/pico8-api/">@neko250/pico-8 api</a> and <a href="https://sectordub.itch.io/pico-8-fanzine-3">@obone/picozine-3</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pdf">
+        <a href="./index.html">German Version</a>
+        <br>
+        <a href="https://github.com/godzil/pico-8-spick/raw/master/build/pico-8-spickzettel.pdf">PDF (DE)</a>
+        <br>
+        <a href="https://github.com/godzil/pico-8-spick/raw/master/build/pico-8-cheatsheet.pdf">PDF (EN)</a>
+        <br>
+        <a href="https://github.com/godzil/pico-8-spick/raw/master/build/pico-8-cheatsheet_fr.pdf">PDF (FR)</a>
+    </div>
+
+</body>
+
+</html>
