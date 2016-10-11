@@ -58,6 +58,10 @@
             background-color: #eee;
         }
 
+        .shortcut {
+	  font-size: 14px;
+        }
+
         .block h3 {
             margin-top: 1mm;
             margin-left: 1mm;
@@ -150,7 +154,7 @@ T={name:"Joe", age:"32"}
             </div>
             <div class="block">
 
-                <h3>Operateurs</h3>
+                <h3>Opérateurs</h3>
                 <pre><code class="language-lua">+ - * / ^ %
 &lt; > <= >= ~= ==
 #list  "A".."B"
@@ -207,14 +211,14 @@ END</code></pre>
 add(t, v)
 del(t, v)
 t={1,2,3,4}
-print(t[1]) --1-based!! </code></pre>
+print(t[1]) --Commence A 1!</code></pre>
             </div>
         </div>
 
 
         <div class="column">
             <div class="block">
-                <h3>Fonctions speciales</h3>
+                <h3>Fonctions spéciales</h3>
                 <pre><code class="language-lua">_init() _update() _draw()</code></pre>
             </div>
             <div class="block">
@@ -245,7 +249,7 @@ circfill(x, y, r, [c])
 line(x0, y0, x1, y1, [c])</code></pre>
             </div>
             <div class="block">
-                <h3>Ecran</h3>
+                <h3>Écran</h3>
                 <pre><code class="language-lua">cls()
 camera([x, y])
 clip([x, y, w, h])</code></pre>
@@ -269,15 +273,15 @@ map(map_x, map_y,
 
         <div class="column">
             <div class="block">
-                <h3>Controles</h3>
+                <h3>Contrôles</h3>
                 <div class="gray">
 
                     <img src="./controls.png" width="100%">
                 </div>
                 <p>
-                    Player 1:
+                    Joueur 1:
                     <br>&nbsp; ⬅︎⬆︎⬇︎➡︎ Y,X/C,V/N,M
-                    <br> Player 2:
+                    <br> Joueur 2:
                     <br>&nbsp; ASDF, LSHIFT, A
                     <br>
                 </p>
@@ -296,7 +300,7 @@ music([n, [fade, mask]])</code></pre>
                 <div style="background-color:#ddd;">
                <img src="./tracker.svg" width="100%">
               </div>
-                <pre><code class="language-lua">0 none
+                <pre><code class="language-lua">0 aucun
 1 glisser
 2 vibrato
 3 drop (drum)
@@ -313,21 +317,22 @@ flr(x),max(x,y),min(x,y),
 rnd(x),sgn(x),sqrt(x)</code></pre>
             </div>
 
-            <div class="block">
-                <h3>Raccourcis</h3> Commun:
+            <div class="block shortcut">
+                <h3>Raccourcis</h3> <b>Commun:</b>
                 <br> &nbsp;Sauver: CTRL+S
-                <br> &nbsp;Changer Mode: ESC
-                <br> Editeur
+                <br> &nbsp;Changer mode: ESC		
+                <br> &nbsp;Relancer jeu: CTRL+R
+                <br> <b>Éditeur:</b>
                 <br> &nbsp;Annuler: CTRL+Z
-                <br> &nbsp;Retablir: CTRL+Y
+                <br> &nbsp;Rétablir: CTRL+Y
                 <br> &nbsp;Chercher: CTRL+F
-                <br> &nbsp;Chercher suivant: CTRL+G
+                <br> &nbsp;Chercher suiv.: CTRL+G
                 <br> &nbsp;Fonction suiv.: Alt+⬆︎⬇︎
             </div>
 
             <div class="block">
                 <div style="font-size: 12px;">
-                    Pico-8 Cheatsheet. Version 2(fr).
+                    Pico-8 Cheatsheet. Version 2.1(fr).
                     Collected by <a href="https://twitter.com/ztiromoritz">@ztiromoritz</a>.
                     French Translation by <a href="https://twitter.com/gozilu">@gozilu</a>.
                     Font: <a href="http://www.lexaloffle.com/info.php?page=1">Joseph White</a>.
