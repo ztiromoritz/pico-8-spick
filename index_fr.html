@@ -3,124 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>pico-8 cheatsheet</title>
-    <style>
-        @font-face {
-            font-family: "pico8";
-            src: url("./PICO-8.ttf");
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        * {
-            -webkit-padding-start: 0px;
-        }
-
-        body {
-            background-color: #aaa;
-        }
-
-        .page {
-            font-family: Courier, monospace;
-            height: 277mm;
-            width: 210mm;
-            margin: 0 auto;
-            background-color: #fff;
-            /* background-color: #ff00ff; */
-        }
-
-        .title {
-            width: 205mm;
-            height: 1mm;
-            margin: 2.5mm;
-            padding-top: 3mm;
-            font-family: pico8, monospace;
-            font-size: 10px;
-            /*background-color: #00ff00;*/
-        }
-
-        .column {
-            height: 287mm;
-            width: 65mm;
-            margin: 2.5mm;
-            /*background-color: #00ff00;  */
-            float: left
-        }
-
-        .block {
-            width: 100%;
-            background-color: #eee;
-            margin-top: 1mm;
-            margin-bottom: 0mm;
-            background-color: #eee;
-        }
-
-        .shortcut {
-	  font-size: 14px;
-        }
-
-        .block h3 {
-            margin-top: 1mm;
-            margin-left: 1mm;
-            margin-bottom: 1mm;
-
-
-        }
-
-        .block h4 {
-            margin-top: 2mm;
-        }
-
-        pre,
-        .gray {
-            background-color: #ddd;
-        }
-
-        code::first-line {
-            line-height: 0px;
-        }
-
-        code {
-            font-family: pico8, monospace;
-            line-height: 1.4;
-            font-size: 11px;
-        }
-
-
-
-        .pdf {
-            font-family: pico8, monospace;
-            font-size: 12px;
-            padding: 5px;
-            width: 180px;
-            height: 80px;
-            line-height: 1.4;
-            background-color: white;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-        }
-
-        pre,p {
-            padding-left:1mm;
-        }
-        p {
-            font-size: 11px;
-        }
-
-
-
-        @media print {
-            .pdf {
-                display: none;
-            }
-        }
-
-
-    </style>
+    <title>Antishèches Pico-8</title>
+    <link rel="stylesheet" type="text/css" href="main.css"></link>
 </head>
 
 <body>
@@ -128,7 +12,7 @@
     <div class="page">
         <div class="title">
             <h1>
-                PICO-8 Cheatsheet
+                Antisheches PICO-8
             </h1>
         </div>
         <div class="column">
@@ -172,7 +56,7 @@ END</code></pre>
 
             <div class="block">
 
-                <h3>Block If</h3>
+                <h3>Bloc If</h3>
                 <pre><code class="language-lua">IF (X  < 33) THEN
  PRINT("HALLO")
 else
@@ -206,7 +90,7 @@ END</code></pre>
 
             </div>
             <div class="block">
-                <h3>Tables</h3>
+                <h3>Tableaux</h3>
                 <pre><code class="language-lua">t={a="x",b=1}
 add(t, v)
 del(t, v)
@@ -297,20 +181,22 @@ music([n, [fade, mask]])</code></pre>
             </div>
             <div class="block">
                 <h3>Musique</h3>
-                <div style="background-color:#ddd;">
+                <div style="background-color:#ddd; position: relative">
+	       <div class="musicoverlay ov_effect">effet</div>
+	       <div class="musicoverlay ov_tone">note</div>
                <img src="./tracker.svg" width="100%">
               </div>
                 <pre><code class="language-lua">0 aucun
-1 glisser
+1 glissando
 2 vibrato
-3 drop (drum)
-4 fade in
-5 fade out
+3 percussion
+4 fondu ouverture
+5 fondu fermeture
 6 arpeggio rapide
 7 arpeggio lent</code></pre>
             </div>
             <div class="block">
-                <h3>Math</h3>
+                <h3>Maths</h3>
                 <pre><code class="language-lua">abs(x),atan2(dx, dy),
 cos(x),sin(x),
 flr(x),max(x,y),min(x,y),
@@ -318,7 +204,7 @@ rnd(x),sgn(x),sqrt(x)</code></pre>
             </div>
 
             <div class="block shortcut">
-                <h3>Raccourcis</h3> <b>Commun:</b>
+                <h3>Raccourcis</h3> <b>Communs:</b>
                 <br> &nbsp;Sauver: CTRL+S
                 <br> &nbsp;Changer mode: ESC		
                 <br> &nbsp;Relancer jeu: CTRL+R
