@@ -1,4 +1,5 @@
 # pico-8-spick
-PICO-8 Spickzettel/PICO-8 Cheatsheet.
- * [German](https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel-v1.pdf)
- * [Englisch](https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel-v1-en.pdf)
+A PICO-8 Cheatsheet. Intended to be helpfull for people learning and having fun with PICO-8 and Lua. 
+ * [German](https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel.pdf)
+ * [English](https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-cheatsheet.pdf)
+ * [French](https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-antiseche.pdf)
