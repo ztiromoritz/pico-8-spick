@@ -4,119 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>pico-8 cheatsheet</title>
-    <style>
-        @font-face {
-            font-family: "pico8";
-            src: url("./PICO-8.ttf");
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        * {
-            -webkit-padding-start: 0px;
-        }
-
-        body {
-            background-color: #aaa;
-        }
-
-        .page {
-            font-family: Courier, monospace;
-            height: 277mm;
-            width: 210mm;
-            margin: 0 auto;
-            background-color: #fff;
-            /* background-color: #ff00ff; */
-        }
-
-        .title {
-            width: 205mm;
-            height: 1mm;
-            margin: 2.5mm;
-            padding-top: 3mm;
-            font-family: pico8, monospace;
-            font-size: 10px;
-            /*background-color: #00ff00;*/
-        }
-
-        .column {
-            height: 287mm;
-            width: 65mm;
-            margin: 2.5mm;
-            /*background-color: #00ff00;  */
-            float: left
-        }
-
-        .block {
-            width: 100%;
-            background-color: #eee;
-            margin-top: 1mm;
-            margin-bottom: 0mm;
-            background-color: #eee;
-        }
-
-        .block h3 {
-            margin-top: 1mm;
-            margin-left: 1mm;
-            margin-bottom: 1mm;
-
-
-        }
-
-        .block h4 {
-            margin-top: 2mm;
-        }
-
-        pre,
-        .gray {
-            background-color: #ddd;
-        }
-
-        code::first-line {
-            line-height: 0px;
-        }
-
-        code {
-            font-family: pico8, monospace;
-            line-height: 1.4;
-            font-size: 11px;
-        }
-
-
-
-        .pdf {
-            font-family: pico8, monospace;
-            font-size: 12px;
-            padding: 5px;
-            width: 160px;
-            height: 80px;
-            line-height: 1.4;
-            background-color: white;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-        }
-
-        pre,p {
-            padding-left:1mm;
-        }
-        p {
-            font-size: 11px;
-        }
-
-
-
-        @media print {
-            .pdf {
-                display: none;
-            }
-        }
-
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css"></link>
 </head>
 
 <body>
@@ -313,11 +201,12 @@ flr(x),max(x,y),min(x,y),
 rnd(x),sgn(x),sqrt(x)</code></pre>
             </div>
 
-            <div class="block">
-                <h3>Shortcuts</h3> Common:
+            <div class="block shortcut">
+                <h3>Shortcuts</h3> <b>Common:</b>
                 <br> &nbsp;Save: STR+S
                 <br> &nbsp;Change Mode: ESC
-                <br> Editor
+		<br> &nbsp;Restart cart: STR+R
+                <br> <b>Editor</b>
                 <br> &nbsp;Undo:STR+Z
                 <br> &nbsp;Redo:STR+Y
                 <br> &nbsp;Search:STR+F
@@ -327,7 +216,7 @@ rnd(x),sgn(x),sqrt(x)</code></pre>
 
             <div class="block">
                 <div style="font-size: 12px;">
-                    Pico-8 Cheatsheet. Version 2(en).
+                    Pico-8 Cheatsheet. Version 2.1(en).
                     Collected by <a href="https://twitter.com/ztiromoritz">@ztiromoritz</a>.
                     Font: <a href="http://www.lexaloffle.com/info.php?page=1">Joseph White</a>.
                     TTF by <a href="http://www.lexaloffle.com/bbs/?tid=3109">RhythmLynx</a>.
@@ -338,11 +227,14 @@ rnd(x),sgn(x),sqrt(x)</code></pre>
     </div>
     <div class="pdf">
         <a href="./index.html">German Version</a>
+	<br>
+        <a href="./index_fr.html">French Version</a>
         <br>
         <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-spickzettel.pdf">PDF (DE)</a>
         <br>
         <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-cheatsheet.pdf">PDF (EN)</a>
-
+	<br>
+        <a href="https://github.com/ztiromoritz/pico-8-spick/raw/master/build/pico-8-antiseche.pdf">PDF (FR)</a>
     </div>
 
 </body>
