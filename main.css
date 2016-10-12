@@ -1,0 +1,144 @@
+@font-face {
+font-family: "pico8";
+    src: url("./PICO-8.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    -webkit-padding-start: 0px;
+}
+
+body {
+    background-color: #aaa;
+}
+
+.page {
+    font-family: Courier, monospace;
+    height: 277mm;
+    width: 210mm;
+    margin: 0 auto;
+    background-color: #fff;
+    /* background-color: #ff00ff; */
+}
+
+.title {
+    width: 205mm;
+    height: 1mm;
+    margin: 2.5mm;
+    padding-top: 3mm;
+    font-family: pico8, monospace;
+    font-size: 10px;
+    /*background-color: #00ff00;*/
+}
+
+.column {
+    height: 287mm;
+    width: 65mm;
+    margin: 2.5mm;
+    /*background-color: #00ff00;  */
+    float: left
+}
+
+.block {
+    width: 100%;
+    background-color: #eee;
+    margin-top: 1mm;
+    margin-bottom: 0mm;
+    background-color: #eee;
+}
+
+.shortcut {
+font-size: 14px;
+}
+
+.block h3 {
+    margin-top: 1mm;
+    margin-left: 1mm;
+    margin-bottom: 1mm;
+
+
+}
+
+.block h4 {
+    margin-top: 2mm;
+}
+
+pre,
+.gray {
+    background-color: #ddd;
+}
+
+code::first-line {
+    line-height: 0px;
+}
+
+code {
+    font-family: pico8, monospace;
+    line-height: 1.4;
+    font-size: 11px;
+}
+
+.pdf {
+    font-family: pico8, monospace;
+    font-size: 12px;
+    padding: 5px;
+    width: 180px;
+    height: 80px;
+    line-height: 1.4;
+    background-color: white;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+pre,p {
+    padding-left:1mm;
+}
+p {
+    font-size: 11px;
+}
+
+@media print {
+    .pdf {
+        display: none;
+    }
+}
+
+.musicoverlay {
+   display: block;
+   font-weight: bolder;
+   font-face: monospace;
+   font-size: 24px;
+   background-color: #ddd;
+   position: absolute;
+}
+.ov_effect {
+ top: 2px;
+ left: 157px;
+ width: 83px;
+}
+.ov_instrument {
+ top: 2px;
+ left: 2px;
+ width: 140px;
+}
+.ov_tone {
+ top: 31px;
+ left: 2px;
+ width: 70px;
+}
+.ov_octave {
+ top: 67px;
+ left: 3px;
+ width: 95px;
+}
+.ov_volume {
+ top: 67px;
+ left: 101px;
+ width: 110px;
+}
+
