@@ -98,8 +98,8 @@ print(t[1]) --1-basiert!! </code></pre>
             <div class="block">
                 <h3>GPIO (RaspberryPi)</h3>
                 <pre><code class="language-lua">--wiringPi pins: p in 0..7
-poke(0x5f80+p, 255) -- set
-poke(0x5f80+p, 0)   -- set
+poke(0x5f80+p, 255) --p on
+poke(0x5f80+p, 0)   --p off
 pval=peek(0x5f80+p) --read </code></pre>
             </div>
         </div>
